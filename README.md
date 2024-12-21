@@ -1,4 +1,5 @@
 # 银龄智伴助手
+## 团队成员：eastlee、yanyong、zhangyang
 
 ## 项目简介
 这是一个基于Spring Boot的聊天和提醒工具，对接豆包大模型开放接口。
