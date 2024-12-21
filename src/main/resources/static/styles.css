@@ -1,0 +1,118 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6f9;
+}
+
+.container {
+    display: flex;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.chat-container, .reminder-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    width: 50%;
+}
+
+.chat-messages {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    height: calc(100vh - 200px);
+    overflow-y: auto;
+    background-color: #f4f6f9;
+}
+
+.chat-messages .message {
+    max-width: 80%;
+    margin: 5px 0;
+    display: flex;
+    align-self: flex-start;
+}
+
+.chat-messages .message.user {
+    align-self: flex-end;
+}
+
+.chat-messages .message .message-content {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chat-messages .message.user .message-content {
+    background-color: #007bff;
+    color: white;
+}
+
+.chat-messages .message.bot .message-content {
+    background-color: #e9ecef;
+    color: #212529;
+}
+
+.chat-messages .message .sender-icon {
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.chat-messages .message .message-text {
+    word-break: break-word;
+    max-width: 100%;
+}
+
+.chat-input {
+    display: flex;
+    margin-top: 10px;
+}
+
+input, button {
+    padding: 10px;
+    margin: 5px;
+}
+
+#message-input, #reminder-content {
+    flex-grow: 1;
+}
+
+.reminder-container input {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.sidebar {
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    height: 100vh;
+    position: sticky;
+    top: 0;
+}
+
+#reminders-list .list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section {
+    transition: all 0.3s ease;
+}
+
+.section.active {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        height: auto;
+        position: static;
+    }
+}
